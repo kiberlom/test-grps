@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+// package proto;
+
+option go_package = "/protobuf";
+
+message User {
+    string UUID = 1;
+    string Name = 2;
+}
+
+message UUIDUser {
+    string UUID = 1;
+}
+
+
+message Nothing {
+    bool dummy = 1;
+}
+
+
+service AuthChecker {
+    // получение пользователя по UUID
+	rpc GetUser(UUIDUser) returns (User);
+	
+}
