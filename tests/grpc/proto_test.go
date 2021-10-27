@@ -47,6 +47,7 @@ func TestLogin(t *testing.T) {
 		defer conn.Close()
 		client := protobuf.NewAuthCheckerClient(conn)
 
+		// тестируем метод сервера
 		resp, err := client.GetUser(ctx, &protobuf.UUIDUser{
 			UUID: "qwerty",
 		})

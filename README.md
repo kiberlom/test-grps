@@ -5,4 +5,4 @@
 `protoc -I proto proto/m.proto  --go-grpc_out=proto/`
 
 запуск тестов \
-`go test -v .\tests\grpc.`
+`go test -v .\tests\grpc`
